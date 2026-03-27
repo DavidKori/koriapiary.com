@@ -17,9 +17,11 @@ const PaystackForm = ({ amount, email, name, phoneNumber, orderId, onPaymentComp
   const subtotal = orderDetails?.subtotal || amount;
   const originalSubtotal = orderDetails?.originalSubtotal || amount;
   const totalSavings = orderDetails?.totalSavings || 0;
-  const tax = orderDetails?.tax || amount * 0.16;
-  const shipping = orderDetails?.shipping || 0;
+  // const tax = orderDetails?.tax || amount * 0.16;
+  // const shipping = orderDetails?.shipping || 0;
   const hasDiscount = totalSavings > 0;
+   const tax = 0;
+  const shipping = 0;
 
   // Check if Paystack script is loaded
   useEffect(() => {

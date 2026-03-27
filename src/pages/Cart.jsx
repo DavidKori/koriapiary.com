@@ -70,8 +70,10 @@ const Cart = () => {
   };
 
   const subtotal = calculateSubtotal();
-  const shipping = subtotal > 5000 ? 0 : 299;
-  const tax = subtotal * 0.16;
+  // const shipping = subtotal > 10000 ? 0 : 299;
+  // const tax = subtotal * 0.16;
+    const shipping =0;
+  const tax = 0;
   const total = subtotal + shipping + tax;
 
   // Check if any item has discount
@@ -190,7 +192,7 @@ const Cart = () => {
               </div>
               {shipping > 0 && subtotal < 5000 && (
                 <div className="shipping-notice">
-                  Add KES {(5000 - subtotal).toLocaleString()} more for free shipping!
+                  Add KES {(10000 - subtotal).toLocaleString()} more for free shipping!
                 </div>
               )}
               <div className="summary-row total">

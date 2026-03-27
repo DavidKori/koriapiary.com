@@ -6,8 +6,10 @@ const CartSummary = () => {
   const { cartItems, cartTotal, formattedTotal } = useCart();
 
   const subtotal = cartTotal;
-  const shipping = subtotal > 50 ? 0 : 5.99;
-  const tax = subtotal * 0.08; // 8% tax
+  // const shipping = subtotal > 10000 ? 0 : 20099;
+  // const tax = subtotal * 0.08; // 8% tax
+    const shipping = 0;
+  const tax = 0; // 8% tax
   const total = subtotal + shipping + tax;
 
   return (

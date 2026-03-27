@@ -81,8 +81,10 @@ const WhatsAppOrder = ({ orderData, onPaymentComplete, onCancel, processing }) =
   };
 
   const subtotal = calculateSubtotal();
-  const shipping = subtotal > 5000 ? 0 : 299;
-  const tax = subtotal * 0.16; // 16% VAT
+  // const shipping = subtotal > 5000 ? 0 : 299;
+    const shipping = 0;
+ const tax = subtotal * 0;
+  // const tax = subtotal * 0.16; // 16% VAT
   const grandTotal = subtotal + shipping + tax;
   
   // Calculate total savings
@@ -176,7 +178,7 @@ const WhatsAppOrder = ({ orderData, onPaymentComplete, onCancel, processing }) =
       `${orderData.customer.notes || 'No special instructions'}%0a%0a` +
       
       `*⚠️ ADMIN ACTION REQUIRED*%0a` +
-      `Please confirm this order by updating its status in the admin panel.%0a` +
+      `Make the order Payment tho confirm the order.%0a` +
       `Order ID: ${orderId}%0a%0a` +
       
       `_This is an automated order message. Please verify and confirm._`;

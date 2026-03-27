@@ -151,8 +151,10 @@ const CheckoutForm = () => {
   const subtotalKES = calculateSubtotal();
   const totalSavings = calculateTotalSavings();
   const originalSubtotal = subtotalKES + totalSavings;
-  const taxKES = subtotalKES * 0.16;
-  const shippingKES = subtotalKES > 10000 ? 0 : 299;
+  // const taxKES = subtotalKES * 0.16;
+  // const shippingKES = subtotalKES > 10000 ? 0 : 299;
+    const taxKES = 0;
+  const shippingKES = 0;
   const totalKES = subtotalKES + taxKES + shippingKES;
 
   // Load saved addresses when user is authenticated
