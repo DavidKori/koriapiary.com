@@ -56,8 +56,9 @@ const PaystackForm = ({ amount, email, name, phoneNumber, orderId, onPaymentComp
 
     const ref = generateReference();
     const amountInKobo = Math.round(amount * 100);
-    const publicKey = "pk_test_b4f111440682847d5e054bc6d3900255e0de8bb6";
-    
+    // const publicKey = "pk_test_b4f111440682847d5e054bc6d3900255e0de8bb6";
+    const publicKey = "pk_live_f01f783b88feb18f405620462cfa34d57c3a28af";
+
     if (!publicKey) {
       showToast('Payment configuration error. Please contact support.', 'error');
       setLoading(false);
