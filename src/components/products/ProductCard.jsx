@@ -31,7 +31,7 @@ const ProductCard = ({ product }) => {
     if (product.description) {
       // Strip HTML tags if any
       const plainText = product.description.replace(/<[^>]*>/g, '');
-      if (plainText.length <= 100) return plainText;
+      if (plainText.length <=30) return plainText;
       return plainText.substring(0, 30) + '...';
     }
     return 'Pure, natural honey from our family-owned apiary.';
