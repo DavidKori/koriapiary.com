@@ -439,13 +439,15 @@ font-weight: bolder;
   }
 }
   @media (max-width: 562px) {
-    
+  .saved-container,.saved-amount {
+    font-size: .6rem ;
+  }  
 .product-card {
   height: 350px;
   width: 150px;
 }
 .add-to-cart-btn {
-  font-size: .5rem !important;
+  font-size: .7rem !important;
 }
 /* Product Image Container */
 .product-card .product-image-container {

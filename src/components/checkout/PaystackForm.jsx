@@ -41,7 +41,7 @@ const PaystackForm = ({ amount, email, name, phoneNumber, orderId, onPaymentComp
   const generateReference = () => {
     return `APIARY-${orderId?.slice(-8)}-${Date.now()}`;
   };
-
+ const [first_name, last_name] = name.split(" ");
   const payWithPaystack = async () => {
     if (!orderId) {
       showToast('Order not created. Please go back and try again.', 'error');
@@ -58,8 +58,8 @@ const PaystackForm = ({ amount, email, name, phoneNumber, orderId, onPaymentComp
 
     const ref = generateReference();
     const amountInKobo = Math.round(amount * 100);
-    // const publicKey = "pk_test_b4f111440682847d5e054bc6d3900255e0de8bb6";
-    const publicKey = "pk_live_f01f783b88feb18f405620462cfa34d57c3a28af";
+    const publicKey = "pk_test_b4f111440682847d5e054bc6d3900255e0de8bb6";
+    // const publicKey = "pk_live_f01f783b88feb18f405620462cfa34d57c3a28af";
 
     if (!publicKey) {
       showToast('Payment configuration error. Please contact support.', 'error');
@@ -119,13 +119,17 @@ const PaystackForm = ({ amount, email, name, phoneNumber, orderId, onPaymentComp
         email,
         amount: amountInKobo,
         ref
-      });
-
+      });     
+      
       const handler = window.PaystackPop.setup({
         key: publicKey,
         email: email,
         amount: amountInKobo,
         currency: 'KES',
+        customer: {
+           first_name: first_name,
+           last_name: last_name ,
+        },
         ref: ref,
         label: "Apiary Honey Payment",
         metadata: {

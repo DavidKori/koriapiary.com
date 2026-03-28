@@ -472,11 +472,12 @@ const CheckoutForm = () => {
 
   const handlePaymentComplete = async (paymentResult) => {
     setProcessing(true);
+
     try {
       if (paymentResult.status === 'successful' || paymentResult.method === 'whatsapp') {
         clearCart();
         showToast('Order placed successfully!', 'success');
-        navigate(`/order-success?orderId=${createdOrderId}`);
+       isAuthenticated ? navigate(`/order-success?orderId=${createdOrderId}`) : navigate('/');
       } else {
         showToast('Payment failed. Please try again.', 'error');
       }
