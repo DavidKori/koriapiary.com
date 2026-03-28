@@ -90,10 +90,10 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; {currentYear} Apiary Honey. All rights reserved.</p>
           <div className="payment-methods">
-            <span><FaCcVisa color="#1A1F71" /> Visa</span>
-            <span><FaCcMastercard color="#EB001B" /> Mastercard</span>
-            <span><FaCcPaypal color="#003087" /> PayPal</span>
-            <span><FaMobileAlt color="#34B233" /> M-Pesa</span> 
+            <span><FaCcVisa color="#1A1F71" /> <span className='willHide'>Visa</span> </span>
+            <span><FaCcMastercard color="#EB001B" /> <span className='willHide'>Mastercard</span> </span>
+            <span><FaCcPaypal color="#003087" /> <span className='willHide'>PayPal</span></span>
+            <span><FaMobileAlt color="#34B233" /> <span className='willHide'>M-Pesa</span> </span> 
           </div>
         </div>
       </div>
