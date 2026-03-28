@@ -23,6 +23,7 @@ body {
   background: var(--bg-primary);
   transition: background-color var(--transition-normal), color var(--transition-normal);
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Typography */
@@ -470,9 +471,9 @@ a:hover {
 
 
 
-/* Header Styles */
+/* Header Styles
 .header {
-  position: sticky;
+  position: relative;
   top: 0;
   z-index: 100;
   background: var(--bg-navbar);
@@ -553,7 +554,7 @@ a:hover {
   text-align: center;
 }
 
-/* Search Bar */
+/* Search Bar *
 .search-bar-container {
   padding: 1rem 2rem;
   border-top: 1px solid var(--border-light);
@@ -581,10 +582,10 @@ a:hover {
   border: none;
   border-radius: 0 0.5rem 0.5rem 0;
   cursor: pointer;
-}
+} */
 
 /* Mobile Menu */
-.mobile-menu-toggle {
+/* .mobile-menu-toggle {
   display: none;
 }
 
@@ -600,7 +601,12 @@ a:hover {
   .desktop-nav {
     display: none;
   }
-
+.mobile-overlay{
+display: inline;
+position: absolute;
+right: 0px;
+overflow-x: hidden;
+}
   .mobile-menu-toggle {
     display: block;
   }
@@ -608,7 +614,7 @@ a:hover {
   .mobile-nav {
     display: flex;
   }
-}
+} */
 
 /* Footer Styles */
 .footer {
@@ -646,7 +652,9 @@ a:hover {
   margin-bottom: 1rem;
   line-height: 1.6;
 }
-
+.link{
+  cursor: pointer;
+}
 .social-links {
   display: flex;
   gap: 1rem;

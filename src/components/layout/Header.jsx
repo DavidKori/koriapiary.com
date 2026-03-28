@@ -24,6 +24,7 @@ import {
 } from 'react-icons/fi';
 import { FaLeaf, FaSeedling } from 'react-icons/fa';
 import { GiBee, GiHoneyJar } from 'react-icons/gi';
+// import '../../styles/header.css';
 const Header = () => {
   const { cartItems } = useCart();
   const { user, isAuthenticated, logout } = useAuth();
@@ -49,7 +50,30 @@ const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
+    useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.classList.remove('menu-open');
+    };
+  }, [mobileMenuOpen]);
+    useEffect(() => {
+    const handleBackdropClick = (e) => {
+      const element = document.getElementById("mobile-overlay")
+      // Check if click is on the backdrop (body.menu-open and not on the menu itself)
+      if (mobileMenuOpen && e.target !== element) {
+        setMobileMenuOpen(true);
+      }
+    };
+    
+    document.addEventListener('click', handleBackdropClick);
+    return () => document.removeEventListener('click', handleBackdropClick);
+  }, [mobileMenuOpen]);
   // Close menus when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -80,7 +104,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${scrolled ? 'scrolled' : ''} ${theme}`}>
+    <header id='header' className={`header ${scrolled ? 'scrolled' : ''} ${theme}`}>
       <div className="header-container">
         {/* Logo */}
         <Link to="/" className="logo">
@@ -237,7 +261,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`mobile-nav-overlay ${mobileMenuOpen ? 'open' : ''}`}>
+      <div id='mobile-overlay' className={`mobile-nav-overlay ${mobileMenuOpen ? 'open' : ''}`}>
         <nav className="mobile-nav">
           <div className="mobile-nav-header">
             <GiHoneyJar className="mobile-logo-icon" />

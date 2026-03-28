@@ -5,10 +5,11 @@ import { FaFacebook, FaTwitter, FaInstagram, FaYoutube,FaCcVisa,FaMobileAlt, FaC
 import { FaLocationCrosshairs, FaBusinessTime } from "react-icons/fa6";
 import { GiHoneypot } from "react-icons/gi";
 import { MdCall,MdOutlineEmail  } from "react-icons/md";
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
+  const navigate = useNavigate()
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -40,11 +41,11 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-subtitle">Quick Links</h4>
             <ul className="footer-links">
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/products">Our Products</Link></li>
-              <li><Link to="/blog">Blog</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/projects">Projects</Link></li>
+              <li onClick={() =>navigate('/about')} className='link'>About Us</li>
+              <li onClick={() =>navigate('/products')} className='link'>Our Products</li>
+              <li onClick={() =>navigate('/blog')} className='link'>Blog</li>
+              <li onClick={() =>navigate('/contact')} className='link'>Contact</li>
+              <li onClick={() =>navigate('/projects')} className='link'>Projects</li>
             </ul>
           </div>
 
@@ -52,11 +53,11 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-subtitle">Customer Service</h4>
             <ul className="footer-links">
-              <li><Link to="/faq">FAQ</Link></li>
-              <li><Link to="/shipping">Shipping Policy</Link></li>
-              <li><Link to="/returns">Returns</Link></li>
-              <li><Link to="/privacy">Privacy Policy</Link></li>
-              <li><Link to="/terms">Terms of Service</Link></li>
+              <li onClick={() =>navigate('/faq')} className='link'>FAQ</li>
+              <li onClick={() =>navigate('/shipping')} className='link'>Shipping Policy</li>
+              <li onClick={() =>navigate('/returns')} className='link'>Returns</li>
+              <li onClick={() =>navigate('/privacy')} className='link'>Privacy Policy</li>
+              <li onClick={() =>navigate('/terms')} className='link'>Terms of Service</li>
             </ul>
           </div>
 
