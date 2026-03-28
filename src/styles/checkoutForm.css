@@ -684,6 +684,10 @@
   .whatsapp-icon {
     font-size: 2.5rem;
   }
+  /*payments*/
+  .payment-methods{
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 480px) {
