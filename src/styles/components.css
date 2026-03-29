@@ -22,7 +22,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
-
+.user-dropdown
 .btn::before {
   content: '';
   position: absolute;
@@ -2250,9 +2250,9 @@
     display: none;
   }
   
-  .user-menu-wrapper {
+  /* .user-menu-wrapper {
     display: none;
-  }
+  } */
   
   .header-actions {
     gap: 0.5rem;
@@ -2271,6 +2271,9 @@
     width: auto;
     margin: 0.5rem;
     border-radius: var(--radius-md);
+  }
+  .user-dropdown{
+    right: -110% !important;
   }
 }
 

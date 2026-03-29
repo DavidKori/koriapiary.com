@@ -11,7 +11,7 @@
   min-height: 600px;
   align-items: center;
 }
-.products-grid
+
 .hero-content {
   animation: fadeInUp 0.8s ease;
 }
@@ -103,7 +103,7 @@
 .feature-card:hover {
   transform: translateY(-5px);
 }
-
+.products-grid
 .feature-icon-wrapper {
   width: 60px;
   height: 60px;
@@ -1140,7 +1140,6 @@
   }
 
   .categories-grid,
-  .products-grid,
   .blog-grid {
     grid-template-columns: 1fr;
   }
