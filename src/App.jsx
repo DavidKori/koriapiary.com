@@ -42,6 +42,7 @@ import ShippingPolicy from './pages/ShippingPolicy';
 import ReturnsPolicy from './pages/ReturnsPolicy';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
+import ScrollToTop from "./utils/scrollToTop";
 
 // Styles
 import './styles/global.css';
@@ -51,6 +52,7 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <ThemeProvider>
           <ToastProvider>
             <AuthProvider>

@@ -184,11 +184,14 @@ const Header = () => {
               </div>
             )}
           </div>
+            {/* Wishlist */}
 
-          {/* Wishlist */}
+          {isAuthenticated && (       
           <Link to="/wishlist" className="icon-btn wishlist-btn">
             <FiHeart />
-          </Link>
+          </Link>)
+          }
+
 
           {/* Cart */}
           <Link to="/cart" className="icon-btn cart-btn">
