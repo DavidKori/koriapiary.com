@@ -22,7 +22,7 @@
   overflow: hidden;
   white-space: nowrap;
 }
-.user-dropdown
+
 .btn::before {
   content: '';
   position: absolute;
@@ -2652,3 +2652,5 @@ select:disabled {
     padding: 5px;
   }
 }
+
+

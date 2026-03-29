@@ -583,7 +583,7 @@ const CheckoutForm = () => {
           )}
 
           {/* Show address form when either not logged in OR using new address */}
-          {(!isAuthenticated || !useSavedAddress) && (
+          { (
             <>
               <div className="form-row">
                 <div className="form-group">
