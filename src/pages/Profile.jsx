@@ -8,6 +8,7 @@ import { updateMyProfile, uploadAvatar } from '../services/userService';
 import { getMyOrders, cancelOrder } from '../services/orderService';
 import { getUserRatings } from '../services/ratingService';
 import { getWishlist } from '../services/wishlistService';
+import { useNavigate } from 'react-router';
 
 import {
   FiUser,
@@ -58,6 +59,7 @@ const Profile = () => {
     bio: '',
     emailVerified:""
   });
+  const navigate = useNavigate()
   console.log(formData.emailVerified)
   useEffect(() => {
     if (isAuthenticated) {
@@ -391,16 +393,16 @@ const Profile = () => {
           <div className="profile-card quick-actions-card">
             <h3>Quick Actions</h3>
             <div className="quick-actions">
-              <button className="quick-action-btn" onClick={() => window.location.href = '/orders'}>
+              <button className="quick-action-btn" onClick={() => navigate( '/orders')}>
                 <FiShoppingBag /> View Orders
               </button>
-              <button className="quick-action-btn" onClick={() => window.location.href = '/wishlist'}>
+              <button className="quick-action-btn" onClick={() => navigate( '/wishlist')}>
                 <FiHeart /> View Wishlist
               </button>
-              <button className="quick-action-btn" onClick={() => window.location.href = '/settings'}>
+              <button className="quick-action-btn" onClick={() => navigate( '/settings')}>
                 <FiShield /> Account Settings
               </button>
-              <button className="quick-action-btn" onClick={() => window.location.href = '/cart'}>
+              <button className="quick-action-btn" onClick={() => navigate( '/cart')}>
                 <FiShoppingCart /> Manage Cart
               </button>
             </div>
