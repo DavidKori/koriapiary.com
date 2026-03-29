@@ -2696,8 +2696,8 @@
 .recommendations-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
+  gap: .5rem;
+  margin-bottom: .5rem;
 }
 
 /* Recommendations Footer */
@@ -2826,13 +2826,13 @@
   
   .recommendations-grid {
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 1rem;
+    gap: .5rem;
   }
 }
 
 @media (max-width: 480px) {
   .recommendations-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   
   .see-more-btn,

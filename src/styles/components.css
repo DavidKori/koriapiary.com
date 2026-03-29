@@ -2615,5 +2615,40 @@ select:disabled {
     grid-template-columns: 1fr;
     gap: 0;
   }
-}
+  .product-info {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    font-size: .7rem;
+    justify-content: start;
 
+  }
+  .product-price-section > .current-price {
+    font-size: .8rem;
+  }
+ .product-tabs > .tab-headers {
+  width: 90% ;
+  overflow-x: hidden;
+  gap: .5rem;
+ }
+}
+@media (max-width: 480px) {
+ .product-info > div {
+    min-width: 45vw;
+  }
+  .product-info > .product-actions{
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .tab-content {
+    width: 95%;
+    font-size: .7rem !important;
+  }
+  .tab-headers > button {
+    padding: 5px !important;
+
+  }
+  .product-details-page {
+    padding: 5px;
+  }
+}
